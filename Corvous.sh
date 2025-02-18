@@ -7,7 +7,7 @@ sudo rm -rf /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/India /etc/localtime
 
 # Rom source repo
-repo init -u git@gitlab.com:ProjectParadox/manifest.git -b 13
+repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -24,16 +24,16 @@ echo "============================"
 echo "============================"
 
 # Export
-export BUILD_USERNAME=Soman Sabeel
+export BUILD_USERNAME=Soman_Sabeel
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
 # Set up build environment
-source build/envsetup.sh
+. build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch lineage_mojito-user
+lunch infinity_$Mojito-$User
 echo "============="
 
 # Make cleaninstall
@@ -41,4 +41,4 @@ make installclean
 echo "============="
 
 # Build rom
-m corvus
+mka bacon
