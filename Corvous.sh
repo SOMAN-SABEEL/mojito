@@ -33,7 +33,7 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch infinity_$Mojito-$User
+lunch infinity_Mojito-User
 echo "============="
 
 # Make cleaninstall
