@@ -7,7 +7,7 @@ sudo rm -rf /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/India /etc/localtime
 
 # Rom source repo
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/CipherOS/android_manifest.git -b fifteen
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -33,7 +33,7 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch infinity_Mojito-User
+lunch cipher_mojito-ap3a-userdebug
 echo "============="
 
 # Make cleaninstall
@@ -41,4 +41,4 @@ make installclean
 echo "============="
 
 # Build rom
-mka bacon
+mka bacon -j$(nproc --all)
