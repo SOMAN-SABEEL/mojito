@@ -50,7 +50,7 @@ echo "======= Export Done ======"
 . build/envsetup.sh
 
 # Choose a target device 
-lunch mojito-ap1a-userdebug
+lunch cipher_mojito-ap1a-userdebug
 
 # Compile CipherOS 
 mka bacon -j$(nproc --all)
