@@ -45,6 +45,11 @@ git clone https://github.com/yaap/hardware_qcom-caf_sm8150_media.git --depth 1 -
 git clone https://github.com/StatiXOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-elf.git --depth 1 -b 14.0.0 prebuilts/gcc/linux-x86/aarch64/aarch64-elf
 git clone https://github.com/StatiXOS/android_prebuilts_gcc_linux-x86_arm_arm-eabi.git --depth 1 -b 12.0.0 prebuilts/gcc/linux-x86/arm/arm-eabi
 
+# Export
+export BUILD_USERNAME=Soman_Sabeel
+export BUILD_HOSTNAME=crave
+echo "======= Export Done ======"
+
 # Set up environment 
 . build/envsetup.sh
 
