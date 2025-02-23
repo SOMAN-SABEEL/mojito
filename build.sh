@@ -5,9 +5,11 @@ echo "======= SettingUp Build Enviroment ======"
 . build/envsetup.sh
 echo "======= Build Enviroment Setup Complete ======"
 # Choose a target device 
-lunch cipher_mojito-ap1a-userdebug
+lunch mojito-ap1a-userdebug
 echo "======= Settting Up Device Complete======"
 # Compile CipherOS 
-echo "======= Compiling ROM ======"
+# Make cleaninstall
+make installclean
+echo "======= Compiling ROOOOM ======"
 mka bacon -j$(nproc --all)
-echo "======= Done ======"
+echo "======= Doneeee ======"
