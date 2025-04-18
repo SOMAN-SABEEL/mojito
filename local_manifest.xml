@@ -23,7 +23,4 @@
 <!-- ViPER4Android -->
 <project path="packages/apps/ViPER4AndroidFX" name="packages_apps_ViPER4AndroidFX" remote="Sachinpawar86" revision="v4a" />
 
-<!-- Leica Camera -->
-<project path="vendor/xiaomi/mojito-leicacamera" name="android_vendor_xiaomi_mojito-leicacamera" remote="Sachin" revision="main" />
-
 </manifest>
