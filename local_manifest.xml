@@ -7,20 +7,20 @@
                  fetch="https://github.com" />
          
 <!-- Device Trees -->
-<project path="device/xiaomi/mojito" name="device_xiaomi_mojito" remote="Sachinpawar86" revision="test" />
-<project path="device/xiaomi/sm6150-common" name="android_device_xiaomi_sm6150-common" remote="Sachinpawar86" revision="Evo-15" />
+<project path="device/xiaomi/mojito" name="device_xiaomi_mojito" remote="SOMAN-SABEEL" revision="Evo-15-QPR2" />
+<project path="device/xiaomi/sm6150-common" name="android_device_xiaomi_sm6150-common" remote="SOMAN-SABEEL" revision="Evo-15-QPR2" />
 
 <!-- Vendor Trees -->
-<project path="vendor/xiaomi/mojito" name="android_vendor_xiaomi_mojito" remote="Sachinpawar86" revision="15" />
-<project path="vendor/xiaomi/sm6150-common" name="android_vendor_xiaomi_sm6150-common" remote="Sachinpawar86" revision="15" />
+<project path="vendor/xiaomi/mojito" name="android_vendor_xiaomi_mojito" remote="SOMAN-SABEEL" revision="15" />
+<project path="vendor/xiaomi/sm6150-common" name="android_vendor_xiaomi_sm6150-common" remote="SOMAN-SABEEL" revision="15" />
 
 <!-- Kernel -->
-<project path="kernel/xiaomi/mojito" name="kernel_xiaomi_mojito" remote="Sachinpawar86" revision="Evo-15" />
+<project path="kernel/xiaomi/mojito" name="kernel_xiaomi_mojito" remote="SOMAN-SABEEL" revision="inline-rom" />
          
 <!-- Hardware -->
-<project path="hardware/xiaomi" name="android_hardware_xiaomi_mojito" remote="Sachinpawar86" revision="mojito" />
+<project path="hardware/xiaomi" name="android_hardware_xiaomi_mojito" remote="SOMAN-SABEEL" revision="voyager" />
 
 <!-- ViPER4Android -->
-<project path="packages/apps/ViPER4AndroidFX" name="packages_apps_ViPER4AndroidFX" remote="Sachinpawar86" revision="v4a" />
+<project path="packages/apps/ViPER4AndroidFX" name="packages_apps_ViPER4AndroidFX" remote="SOMAN-SABEEL" revision="v4a" />
 
 </manifest>
