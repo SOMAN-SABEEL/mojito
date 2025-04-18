@@ -7,7 +7,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Porter-union-rom-updates/local_manifests -b Sm-a10s .repo/local_manifests
+git clone https://github.com/SOMAN-SABEEL/mojito/blob/main/local_manifest.xml .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
