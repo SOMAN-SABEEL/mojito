@@ -9,8 +9,8 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch lineage_mojito-userdebug
+riseup mojito userdebug
 echo "==== brunching ====="
 
 # Build rom
-mka bacon
+rise b
