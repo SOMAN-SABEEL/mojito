@@ -29,7 +29,7 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 riseup mojito userdebug
-echo "--brunching--"
+echo "==== brunching ====="
 
 # Build rom
 rise b
