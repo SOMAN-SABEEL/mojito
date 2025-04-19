@@ -7,10 +7,31 @@ echo "=================="
 echo "Repo init success"
 echo "=================="
 
-# Local manifests
-git clone https://github.com/SOMAN-SABEEL/mojito.git .repo/local_manifests
+# sync device resources
+echo "========================="
+echo "Cloning Device Resources"
+echo "========================="
+
+# device tree
+git clone https://github.com/SOMAN-SABEEL/device_xiaomi_mojito.git -b Evo-15-QPR2
+# device common tree 
+git clone https://github.com/SOMAN-SABEEL/android_device_xiaomi_sm6150-common.git -b Evo-15-QPR2
+
+# vendor tree
+git clone https://github.com/SOMAN-SABEEL/android_vendor_xiaomi_mojito -b 15
+git clone https://github.com/SOMAN-SABEEL/android_vendor_xiaomi_sm6150-common -b 15
+
+# kernel 
+git clone https://github.com/SOMAN-SABEEL/kernel_xiaomi_mojito -b inline-rom
+
+# hardware
+git clone https://github.com/SOMAN-SABEEL/android_hardware_xiaomi -b voyager
+
+# viper-4-android
+git clone https://github.com/SOMAN-SABEEL/packages_apps_ViPER4AndroidFX -b v4a
+
 echo "============================"
-echo "Local manifest clone success"
+echo "Device Resource Clone Done"
 echo "============================"
 
 # Sync
