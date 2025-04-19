@@ -1,4 +1,5 @@
-crave run --clean --no-patch -- "rm -rf .repo/local_manifests/
+
+rm -rf .repo/local_manifests/
 
 # repo init rom
 repo init -u https://github.com/RisingOS-Revived/android -b fifteen --git-lfs
@@ -7,7 +8,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/SOMAN-SABEEL/mojito/blob/main/local_manifest.xml .repo/local_manifests
+git clone https://github.com/SOMAN-SABEEL/mojito.git .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
