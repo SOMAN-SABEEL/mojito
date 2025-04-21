@@ -6,7 +6,7 @@ echo "======= Export Done ======"
 # env Setup
 . build/envsetup.sh
  # Lunch 
-lunch riseup_mojito-userdebug
+riseup mojito userdebug
 # baking
-mka bacon
+rise b
 # Done
