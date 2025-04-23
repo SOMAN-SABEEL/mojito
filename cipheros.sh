@@ -15,7 +15,7 @@ echo "Repo init success"
 echo "=================="
 
 # Clone local_manifests repository
-git clone https://github.com/SOMAN-SABEEL/mojito/local_manifest.xml .repo/local_manifests
+git clone https://github.com/SOMAN-SABEEL/mojito/default.xml .repo/manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
