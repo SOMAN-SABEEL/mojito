@@ -8,12 +8,14 @@ sudo ln -s /usr/share/zoneinfo/Asia/India /etc/localtime
 
 # Rom source repo
 repo init -u https://github.com/CipherOS/android_manifest.git -b fifteen
+# Sync 
+repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Clone local_manifests repository
-git clone -b Evo-15 https://github.com/Sachinpawar86/local_manifests .repo/local_manifests
+git clone https://github.com/SOMAN-SABEEL/mojito/local_manifest.xml .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -28,17 +30,11 @@ export BUILD_USERNAME=Soman_Sabeel
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
-# Set up build environment
+# Set up environment 
 . build/envsetup.sh
-echo "====== Envsetup Done ======="
 
-# Lunch
+# Choose a target device 
 lunch cipher_mojito-ap3a-userdebug
-echo "============="
 
-# Make cleaninstall
-make installclean
-echo "============="
-
-# Build rom
+# Compile CipherOS 
 mka bacon -j$(nproc --all)
