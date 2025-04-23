@@ -26,8 +26,8 @@ echo "============================"
 echo "============================"
 
 # Export
-export BUILD_USERNAME=Soman_Sabeel
-export BUILD_HOSTNAME=crave
+export CIPHER_MAINTAINER=Soman_Sabeel
+export CIPHER_GAPPS=true
 echo "======= Export Done ======"
 
 # Set up environment 
