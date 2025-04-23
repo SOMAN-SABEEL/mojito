@@ -15,14 +15,14 @@ echo "Repo init success"
 echo "=================="
 
 # Clone local_manifests repository
-git clone https://github.com/SOMAN-SABEEL/mojito/default.xml .repo/manifests
+# git clone https://github.com/SOMAN-SABEEL/mojito/default.xml .repo/manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
 
 
 # Sync the repositories
-/opt/crave/resync.sh
+# /opt/crave/resync.sh
 echo "============================"
 
 # Export
