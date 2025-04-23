@@ -6,21 +6,18 @@ rm -rf .repo/local_manifests/
 sudo rm -rf /etc/localtime
 sudo ln -s /usr/share/zoneinfo/Asia/India /etc/localtime
 
-# repo init rom
-repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
+# Rom source repo
+repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
-# Local manifests
-git clone -b Crd-15 https://github.com/Sachinpawar86/local_manifests .repo/local_manifests
+# Clone local_manifests repository
+git clone -b Evo-15-QPR2 https://github.com/Sachinpawar86/local_manifests .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
 
-# Custom Source
-wget https://raw.githubusercontent.com/custom-crdroid/custom_cr_setup/refs/heads/15.0/vendorsetup.sh
-bash vendorsetup.sh
 
 # Sync the repositories
 /opt/crave/resync.sh
@@ -36,7 +33,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch lineage_mojito-ap3a-user
+lunch lineage_mojito-bp1a-user
 echo "============="
 
 # Make cleaninstall
@@ -44,4 +41,4 @@ make installclean
 echo "============="
 
 # Build rom
-mka bacon
+m evolution
