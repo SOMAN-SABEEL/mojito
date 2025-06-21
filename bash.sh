@@ -1,27 +1,18 @@
 #!/bin/bash
 set -e
 
-# Setup KernelSU-Next
-curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -
+# Get absolute path to this script's directory (ROM root)
+ROM_ROOT="$(cd "$(dirname "$0")" && pwd)"
+KERNEL_DIR="$ROM_ROOT/kernel_xiaomi_mojito"
 
-# Export build environment
-export ARCH=arm64
-export SUBARCH=arm64
-export KBUILD_BUILD_USER=Soman
-export KBUILD_BUILD_HOST=crave
+# Check if kernel dir exists
+if [ ! -d "$KERNEL_DIR" ]; then
+    echo "❌ Kernel source not found at: $KERNEL_DIR"
+    exit 1
+fi
 
-# Proton Clang path 
-export CLANG_PATH=$(pwd)/proton-clang
-export PATH=$CLANG_PATH/bin:$PATH
+# Step into kernel directory
+cd "$KERNEL_DIR"
 
-# Clean previous output
-rm -rf out
-
-# Load default config
-make O=out mojito_defconfig
-
-# Build kernel
-make -j$(nproc) O=out \
-    CC=clang \
-    CROSS_COMPILE=${CLANG_PATH}/bin/aarch64-linux-gnu- \
-    CROSS_COMPILE_ARM32=${CLANG_PATH}/bin/arm-linux-gnueabi-
+# Run the main build script
+./kernel_build.sh
