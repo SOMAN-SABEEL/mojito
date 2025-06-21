@@ -1,44 +1,27 @@
 #!/bin/bash
+set -e
 
-rm -rf .repo/local_manifests/
+# Setup KernelSU-Next
+curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -
 
-# Local TimeZone
-sudo rm -rf /etc/localtime
-sudo ln -s /usr/share/zoneinfo/Asia/India /etc/localtime
+# Export build environment
+export ARCH=arm64
+export SUBARCH=arm64
+export KBUILD_BUILD_USER=Soman
+export KBUILD_BUILD_HOST=crave
 
-# Rom source repo
-repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
-echo "=================="
-echo "Repo init success"
-echo "=================="
+# Proton Clang path 
+export CLANG_PATH=$(pwd)/proton-clang
+export PATH=$CLANG_PATH/bin:$PATH
 
-# Clone local_manifests repository
-git clone -b Evo-15-QPR2 https://github.com/Sachinpawar86/local_manifests .repo/local_manifests
-echo "============================"
-echo "Local manifest clone success"
-echo "============================"
+# Clean previous output
+rm -rf out
 
+# Load default config
+make O=out mojito_defconfig
 
-# Sync the repositories
-/opt/crave/resync.sh
-echo "============================"
-
-# Export
-export BUILD_USERNAME=Soman_Sabeel
-export BUILD_HOSTNAME=crave
-echo "======= Export Done ======"
-
-# Set up build environment
-source build/envsetup.sh
-echo "====== Envsetup Done ======="
-
-# Lunch
-lunch lineage_mojito-bp1a-user
-echo "============="
-
-# Make cleaninstall
-make installclean
-echo "============="
-
-# Build rom
-m evolution
+# Build kernel
+make -j$(nproc) O=out \
+    CC=clang \
+    CROSS_COMPILE=${CLANG_PATH}/bin/aarch64-linux-gnu- \
+    CROSS_COMPILE_ARM32=${CLANG_PATH}/bin/arm-linux-gnueabi-
