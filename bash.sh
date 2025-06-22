@@ -1,18 +1,13 @@
 #!/bin/bash
-set -e
 
-# Get absolute path to this script's directory (ROM root)
-ROM_ROOT="$(cd "$(dirname "$0")" && pwd)"
-KERNEL_DIR="$ROM_ROOT/kernel_xiaomi_mojito"
+# Sync source (safe)
+repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 
-# Check if kernel dir exists
-if [ ! -d "$KERNEL_DIR" ]; then
-    echo "❌ Kernel source not found at: $KERNEL_DIR"
-    exit 1
-fi
+# Set up environment
+. build/envsetup.sh
 
-# Step into kernel directory
-cd "$KERNEL_DIR"
+# Lunch device
+lunch cipher_mojito-userdebug
 
-# Run the main build script
-./kernel_build.sh
+# Start build
+mka bacon -j$(nproc --all)
