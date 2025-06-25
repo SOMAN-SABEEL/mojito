@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Initialize repo
-
-# Sync source (safe)
-repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
-
 # Clone device resources
 git clone --depth=1 -b mojito-voyager https://github.com/SOMAN-SABEEL/android_device_xiaomi_sm6150-common.git device/xiaomi/sm6150-common
 git clone --depth=1 -b mojito-voyager https://github.com/SOMAN-SABEEL/device_xiaomi_mojito.git device/xiaomi/mojito
