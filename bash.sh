@@ -27,6 +27,12 @@ git clone --depth=1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_sm6
 . build/envsetup.sh
 
 # Add maintainer flags
+export WITH_GAPPS=true
+export INFINITY_MAINTAINER="Soman Sabeel"
+export INFINITY_BUILD_TYPE=UNOFFICIAL
+export TARGET_SUPPORTS_TOUCHGESTURES=true
+export USE_MOTO_CALCULATOR=true
+export TARGET_SUPPORTS_BLUR=true
 
 # Lunch device
 lunch infinity_mojito-userdebug
