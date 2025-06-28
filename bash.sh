@@ -16,12 +16,12 @@ repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfi
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 
 # Clone device trees
-git clone --depth 1 -b mojito-voyager https://github.com/SOMAN-SABEEL/device_xiaomi_mojito.git device/xiaomi/mojito
-git clone --depth 1 -b mojito-voyager https://github.com/SOMAN-SABEEL/android_device_xiaomi_sm6150-common.git device/xiaomi/sm6150-common
-git clone --depth 1 -b voyager https://github.com/SOMAN-SABEEL/android_hardware_xiaomi.git hardware/xiaomi
-git clone --depth 1 -b inline-rom https://github.com/SOMAN-SABEEL/kernel_xiaomi_mojito.git kernel/xiaomi/mojito
-git clone --depth 1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_mojito.git vendor/xiaomi/mojito
-git clone --depth 1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_sm6150-common.git vendor/xiaomi/sm6150-common
+git clone --depth=1 -b mojito-voyager https://github.com/SOMAN-SABEEL/device_xiaomi_mojito.git device/xiaomi/mojito
+git clone --depth=1 -b mojito-voyager https://github.com/SOMAN-SABEEL/android_device_xiaomi_sm6150-common.git device/xiaomi/sm6150-common
+git clone --depth=1 -b voyager https://github.com/SOMAN-SABEEL/android_hardware_xiaomi.git hardware/xiaomi
+git clone --depth=1 -b inline-rom https://github.com/SOMAN-SABEEL/kernel_xiaomi_mojito.git kernel/xiaomi/mojito
+git clone --depth=1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_mojito.git vendor/xiaomi/mojito
+git clone --depth=1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_sm6150-common.git vendor/xiaomi/sm6150-common
 
 # Setup build environment
 . build/envsetup.sh
