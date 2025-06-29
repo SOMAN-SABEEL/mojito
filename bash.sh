@@ -17,13 +17,7 @@ rm -rf \
   vendor/xiaomi/mojito \
   vendor/xiaomi/sm6150-common \
   out
-
-# 🧭 Initialize repo
-echo "🌐 Initializing repo..."
-repo init --depth=1 --no-repo-verify --git-lfs \
-  -u https://github.com/ProjectInfinity-X/manifest \
-  -b QPR3 \
-  -g default,-mips,-darwin,-notdefault
+  
 
 ## manifest cloning
 git clone --depth=1 -b SOMAN-SABEEL-A15 https://github.com/SOMAN-SABEEL/local_manifest.git .repo/local_manifests
