@@ -3,6 +3,10 @@
 # 💫 Stop on error
 set -e
 
+
+rm -rf .repo/local_manifests
+mkdir -p .repo/local_manifests
+
 # 🧹 Clean conflicting folders
 echo "🧼 Cleaning old sources..."
 rm -rf \
