@@ -9,6 +9,10 @@ repo init --depth=1 --no-repo-verify --git-lfs \
   -u https://github.com/ProjectInfinity-X/manifest \
   -b QPR3 \
   -g default,-mips,-darwin,-notdefault
+
+## Setting up manifest
+git clone --depth=1 -b SOMAN-SABEEL-A15 https://github.com/SOMAN-SABEEL/local_manifest.git .repo/local_manifests
+
   
 # 🌱 Setup build environment
 echo "🔧 Setting up build environment..."
