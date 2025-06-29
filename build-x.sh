@@ -3,6 +3,16 @@
 # 💫 Stop on error
 set -e
 
+echo "🧼 Cleaning old sources..."
+rm -rf \
+  device/xiaomi/mojito \
+  device/xiaomi/sm6150-common \
+  hardware/xiaomi \
+  kernel/xiaomi/mojito \
+  vendor/xiaomi/mojito \
+  vendor/xiaomi/sm6150-common \
+  out
+
 # 🧭 Initialize repo
 echo "🌐 Initializing repo..."
 repo init --depth=1 --no-repo-verify --git-lfs \
@@ -13,7 +23,9 @@ repo init --depth=1 --no-repo-verify --git-lfs \
 ## Setting up manifest
 git clone --depth=1 -b SOMAN-SABEEL-A15 https://github.com/SOMAN-SABEEL/local_manifest.git .repo/local_manifests
 
-  
+## syncing 
+/opt/crave/resync.sh
+
 # 🌱 Setup build environment
 echo "🔧 Setting up build environment..."
 . build/envsetup.sh
