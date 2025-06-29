@@ -30,6 +30,8 @@ git clone --depth=1 -b inline-rom https://github.com/SOMAN-SABEEL/kernel_xiaomi_
 git clone --depth=1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_mojito.git vendor/xiaomi/mojito
 git clone --depth=1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_sm6150-common.git vendor/xiaomi/sm6150-common
 
+## sync
+/opt/sync/resync.sh
 # 🌱 Setup build environment
 echo "🔧 Setting up build environment..."
 . build/envsetup.sh
@@ -46,7 +48,7 @@ export TARGET_BUILD_GOOGLE_TELEPHONY=false
 
 # 🍽️ Choose lunch combo
 echo "🍽️ Lunching device..."
-lunch infinity_mojito-userdebug
+lunch lineage_mojito-bp1a-userdebug
 
 # 🧽 Clean build environment
 echo "🧽 Running full clean..."
