@@ -26,7 +26,7 @@ export TARGET_BUILD_GOOGLE_TELEPHONY=false
 
 # 🍽️ Choose lunch combo
 echo "🍽️ Lunching device..."
-lunch infinity_mojito-userdebug
+lunch infinity-mojito-userdebug
 
 # 🧽 Clean build environment
 echo "🧽 Running full clean..."
