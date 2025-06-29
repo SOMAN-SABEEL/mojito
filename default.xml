@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
- <manifest>
-          
-          <remote name="SOMAN-SABEEL"
-                  fetch="https://github.com/SOMAN-SABEEL" />
-          
- <!-- Device Trees -->
- <project path="device/xiaomi/mojito" name="device_xiaomi_mojito" remote="SOMAN-SABEEL" revision="Evo-15-QPR2" />
- <project path="device/xiaomi/sm6150-common" name="android_device_xiaomi_sm6150-common" remote="SOMAN-SABEEL" revision="Evo-15-QPR2" />
- 
- <!-- Vendor Trees -->
- <project path="vendor/xiaomi/mojito" name="android_vendor_xiaomi_mojito" remote="SOMAN-SABEEL" revision="15" />
- <project path="vendor/xiaomi/sm6150-common" name="android_vendor_xiaomi_sm6150-common" remote="SOMAN-SABEEL" revision="15" />
- 
- <!-- Kernel -->
- <project path="kernel/xiaomi/mojito" name="kernel_xiaomi_mojito" remote="SOMAN-SABEEL" revision="inline-rom" />
-          
- <!-- Hardware -->
- <project path="hardware/xiaomi" name="android_hardware_xiaomi_mojito" remote="SOMAN-SABEEL" revision="voyager" />
- 
- <!-- ViPER4Android -->
- <project path="packages/apps/ViPER4AndroidFX" name="packages_apps_ViPER4AndroidFX" remote="SOMAN-SABEEL" revision="v4a" />
+<manifest>
+
+  <!-- GitHub Remote -->
+  <remote name="github" fetch="https://github.com" />
+
+  <!-- GitLab Remote -->
+  <remote name="gitlab" fetch="https://gitlab.com" />
+
+  <!-- Default settings -->
+  <default revision="main" remote="github" sync-j="4" />
+
+  <!-- 🌱 Device Trees -->
+  <project name="SOMAN-SABEEL/device_xiaomi_mojito" path="device/xiaomi/mojito" revision="mojito-voyager" />
+  <project name="SOMAN-SABEEL/android_device_xiaomi_sm6150-common" path="device/xiaomi/sm6150-common" revision="mojito-voyager" />
+
+  <!-- 🧠 Hardware -->
+  <project name="SOMAN-SABEEL/android_hardware_xiaomi" path="hardware/xiaomi" revision="voyager" />
+
+  <!-- 🧩 Kernel -->
+  <project name="SOMAN-SABEEL/kernel_xiaomi_mojito" path="kernel/xiaomi/mojito" revision="inline-rom" />
+
+  <!-- 🏭 Vendor Blobs (from GitLab) -->
+  <project name="romgharti/android_vendor_xiaomi_mojito" path="vendor/xiaomi/mojito" revision="15" remote="gitlab" />
+  <project name="romgharti/android_vendor_xiaomi_sm6150-common" path="vendor/xiaomi/sm6150-common" revision="15" remote="gitlab" />
+
+</manifest>
