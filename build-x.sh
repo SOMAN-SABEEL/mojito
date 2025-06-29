@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# 💫 Stop on error
+set -e
+
+# 🌱 Setup build environment
+echo "🔧 Setting up build environment..."
+. build/envsetup.sh
+
+# 🏷️ Set Project Infinity X flags
+export WITH_GAPPS=true
+export INFINITY_MAINTAINER="Soman Sabeel"
+export INFINITY_BUILD_TYPE=UNOFFICIAL
+export TARGET_SUPPORTS_TOUCHGESTURES=true
+export USE_MOTO_CALCULATOR=true
+export TARGET_SUPPORTS_BLUR=true
+export TARGET_HAS_UDFPS=false
+export TARGET_BUILD_GOOGLE_TELEPHONY=false
+
+# 🍽️ Choose lunch combo
+echo "🍽️ Lunching device..."
+lunch infinity_mojito-userdebug
+
+# 🧽 Clean build environment
+echo "🧽 Running full clean..."
+mka clean
+
+# 🔨 Start building
+echo "🚀 Starting build..."
+mka bacon -j$(nproc --all)
