@@ -3,6 +3,13 @@
 # 💫 Stop on error
 set -e
 
+# 🧭 Initialize repo
+echo "🌐 Initializing repo..."
+repo init --depth=1 --no-repo-verify --git-lfs \
+  -u https://github.com/ProjectInfinity-X/manifest \
+  -b QPR3 \
+  -g default,-mips,-darwin,-notdefault
+  
 # 🌱 Setup build environment
 echo "🔧 Setting up build environment..."
 . build/envsetup.sh
