@@ -43,7 +43,7 @@ export TARGET_BUILD_GOOGLE_TELEPHONY=false
 
 # 🍽️ Choose lunch combo
 echo "🍽️ Lunching device..."
-lunch lineage_mojito-bp1a-userdebug
+lunch lineage_mojito-ap4a-userdebug
 
 # 🧽 Clean build environment
 echo "🧽 Running full clean..."
