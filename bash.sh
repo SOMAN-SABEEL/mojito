@@ -31,7 +31,8 @@ git clone --depth=1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_moj
 git clone --depth=1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_sm6150-common.git vendor/xiaomi/sm6150-common
 
 ## sync
-/opt/sync/resync.sh
+/opt/crave/resync.sh
+
 # 🌱 Setup build environment
 echo "🔧 Setting up build environment..."
 . build/envsetup.sh
