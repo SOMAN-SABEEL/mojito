@@ -21,12 +21,6 @@ repo init --depth=1 --no-repo-verify --git-lfs \
   -b QPR3 \
   -g default,-mips,-darwin,-notdefault
 
-# 🔄 Sync source
-echo "🔁 Syncing source..."
-repo sync -c --no-clone-bundle --no-tags \
-  --optimized-fetch --prune --force-sync \
-  -j$(nproc --all)
-
 # 📦 Clone device trees
 echo "📦 Cloning device resources..."
 git clone --depth=1 -b mojito-voyager https://github.com/SOMAN-SABEEL/device_xiaomi_mojito.git device/xiaomi/mojito
