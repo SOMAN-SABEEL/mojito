@@ -21,14 +21,8 @@ repo init --depth=1 --no-repo-verify --git-lfs \
   -b QPR3 \
   -g default,-mips,-darwin,-notdefault
 
-# 📦 Clone device trees
-echo "📦 Cloning device resources..."
-git clone --depth=1 -b mojito-voyager https://github.com/SOMAN-SABEEL/device_xiaomi_mojito.git device/xiaomi/mojito
-git clone --depth=1 -b mojito-voyager https://github.com/SOMAN-SABEEL/android_device_xiaomi_sm6150-common.git device/xiaomi/sm6150-common
-git clone --depth=1 -b voyager https://github.com/SOMAN-SABEEL/android_hardware_xiaomi.git hardware/xiaomi
-git clone --depth=1 -b inline-rom https://github.com/SOMAN-SABEEL/kernel_xiaomi_mojito.git kernel/xiaomi/mojito
-git clone --depth=1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_mojito.git vendor/xiaomi/mojito
-git clone --depth=1 -b 15 https://gitlab.com/romgharti/android_vendor_xiaomi_sm6150-common.git vendor/xiaomi/sm6150-common
+## manifest cloning
+git clone --depth=1 -b SOMAN-SABEEL-A15 https://github.com/SOMAN-SABEEL/local_manifest.git .repo/local_manifests
 
 ## sync
 /opt/crave/resync.sh
