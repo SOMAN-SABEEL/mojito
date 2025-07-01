@@ -20,7 +20,7 @@ echo "rom flags"
 
 # 🍽️ Choose lunch combo
 echo "🍽️ Lunching device..."
-lunch lineage_mojito-ap4a-userdebug
+lunch lineage_mojito-ap2a-userdebug
 
 # 🧽 Clean build environment
 echo "🧽 Running full clean..."
