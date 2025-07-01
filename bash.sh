@@ -19,11 +19,6 @@ rm -rf \
   out
 
 ## repo sync
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
-  
-
-## manifest cloning
-git clone --depth=1 -b SOMAN-SABEEL-A15 https://github.com/SOMAN-SABEEL/local_manifest.git .repo/local_manifests
 
 ## sync
 /opt/crave/resync.sh
@@ -33,6 +28,7 @@ echo "🔧 Setting up build environment..."
 . build/envsetup.sh
 
 # 🏷️ Set Project Infinity X flags
+echo "rom flags"
 export WITH_GAPPS=true
 export INFINITY_MAINTAINER="Soman Sabeel"
 export INFINITY_BUILD_TYPE=UNOFFICIAL
