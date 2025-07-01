@@ -16,14 +16,7 @@ echo "🔧 Setting up build environment..."
 
 # 🏷️ Set Project Infinity X flags
 echo "rom flags"
-export WITH_GAPPS=true
-export INFINITY_MAINTAINER="Soman Sabeel"
-export INFINITY_BUILD_TYPE=UNOFFICIAL
-export TARGET_SUPPORTS_TOUCHGESTURES=true
-export USE_MOTO_CALCULATOR=true
-export TARGET_SUPPORTS_BLUR=true
-export TARGET_HAS_UDFPS=false
-export TARGET_BUILD_GOOGLE_TELEPHONY=false
+
 
 # 🍽️ Choose lunch combo
 echo "🍽️ Lunching device..."
