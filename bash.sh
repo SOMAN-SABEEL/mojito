@@ -1,31 +1,43 @@
 #!/bin/bash
 
-# 💫 Stop on error
-set -e
+rm -rf .repo/local_manifests/
 
-# 🧹 Clean conflicting folders
+# Local TimeZone
+sudo rm -rf /etc/localtime
+sudo ln -s /usr/share/zoneinfo/Asia/India /etc/localtime
 
-## repo sync
+# Rom source repo
+repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
+echo "=================="
+echo "Repo init success"
+echo "=================="
 
-## sync
+# Clone local_manifests repository
+git clone -b Evo-15-QPR2 https://github.com/Sachinpawar86/local_manifests .repo/local_manifests
+echo "============================"
+echo "Local manifest clone success"
+echo "============================"
+
+# Sync the repositories
 /opt/crave/resync.sh
+echo "============================"
 
-# 🌱 Setup build environment
-echo "🔧 Setting up build environment..."
-. build/envsetup.sh
+# Export
+export BUILD_USERNAME=SOMAN-SABEEL
+export BUILD_HOSTNAME=crave
+echo "======= Export Done ======"
 
-# 🏷️ Set Project Infinity X flags
-echo "rom flags"
+# Set up build environment
+source build/envsetup.sh
+echo "====== Envsetup Done ======="
 
+# Lunch
+lunch lineage_mojito-bp1a-user
+echo "============="
 
-# 🍽️ Choose lunch combo
-echo "🍽️ Lunching device..."
-lunch lineage_mojito-ap2a-userdebug
+# Make cleaninstall
+make installclean
+echo "============="
 
-# 🧽 Clean build environment
-echo "🧽 Running full clean..."
-mka clean
-
-# 🔨 Start building
-echo "🚀 Starting build..."
-mka bacon
+# Build rom
+m evolution
