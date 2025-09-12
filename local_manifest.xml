@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+         
+         <remote name="Sachinpawar86"
+                 fetch="https://github.com/Sachinpawar86" />
+           <remote name="soman"
+                 fetch="https://github.com/soman-sabeel" />
+         <remote name="Sachin"
+                 fetch="https://gitlab.com/sachinbarange86" />
+         <remote name="Project"
+                 fetch="https://github.com" />
+         
+<!-- Device Trees -->
+<project path="device/xiaomi/mojito" name="device_xiaomi_mojito" remote="Sachinpawar86" revision="Evo-16" clone-depth="1" />
+<project path="device/xiaomi/sm6150-common" name="android_device_xiaomi_sm6150-common" remote="Sachinpawar86" revision="Evo-16" clone-depth="1" />
+
+<!-- Vendor Trees -->
+<project path="vendor/xiaomi/mojito" name="android_vendor_xiaomi_mojito" remote="Sachin" revision="16" clone-depth="1" />
+<project path="vendor/xiaomi/sm6150-common" name="android_vendor_xiaomi_sm6150-common" remote="Sachin" revision="16" clone-depth="1" />
+
+<!-- Kernel -->
+<project path="kernel/xiaomi/mojito" name="kernel_xiaomi_mojito" remote="Sachinpawar86" revision="Evo-16" clone-depth="1" />
+         
+<!-- Hardware -->
+<project path="hardware/xiaomi" name="android_hardware_xiaomi_mojito" remote="Sachinpawar86" revision="mojito" clone-depth="1" />
+
+<!-- Leica Camera -->
+<project path="vendor/xiaomi/mojito-leicacamera" name="android_vendor_xiaomi_mojito-leicacamera" remote="Sachin" revision="main" clone-depth="1" />
+
+<!-- ViPER4AndroidFX -->
+<project path="packages/apps/ViPER4AndroidFX" name="TogoFire/packages_apps_ViPER4AndroidFX" remote="Project" revision="v4a" clone-depth="1" />
+
+</manifest>
