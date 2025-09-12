@@ -14,7 +14,7 @@ echo "Repo init success"
 echo "=================="
 
 # Clone local_manifests repository
-git clone -b Evo-16 https://github.com/Sachinpawar86/local_manifests .repo/local_manifests
+git clone https://github.com/SOMAN-SABEEL/local_manifest .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
