@@ -5,7 +5,6 @@ rm -rf .repo/local_manifests/
 
 # Local TimeZone
 sudo rm -rf /etc/localtime
-sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 
 # ROM source repo
 repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
