@@ -1,14 +1,7 @@
 #!/bin/bash
 # Remove old local_manifests
 # ROM source repo
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
-echo "=================="
-echo "Repo init success"
-echo "=================="
 # Clone local_manifests repository
-echo "============================"
-echo "Local manifest clone success"
-echo "============================"
 # Signed Keys
 # Sync the repositories
 /opt/crave/resync.sh
