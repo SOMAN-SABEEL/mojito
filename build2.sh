@@ -4,7 +4,7 @@
 # Clone local_manifests repository
 # Signed Keys
 # Sync the repositories
-/opt/crave/resync.sh
+#/opt/crave/resync.sh
 echo "============================"
 # Export
 export BUILD_USERNAME="Soman"
