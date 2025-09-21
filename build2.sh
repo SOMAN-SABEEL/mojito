@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "================ sync =============="
+/opt/crave/resync.sh
 echo "============================"
 # Export
 export BUILD_USERNAME="Soman"
