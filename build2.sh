@@ -32,8 +32,13 @@ source build/envsetup.sh
 echo "====== Envsetup Done ==============="
 # Lunch
 lunch lineage_mojito-bp2a-userdebug
+
 echo "============="
 # Make clean install
 echo "============================"
 # Build ROM
 m evolution
+
+echo "====================== done evolution ======================="
+crave pull out/target/product/*/*.zip
+echo "========= pull done ========"
